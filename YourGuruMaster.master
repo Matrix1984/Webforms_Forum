@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="YourGuruMaster.master.cs" Inherits="YourGuruMaster" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<style type="text/css">
+    
+    #container{position:relative;}
+
+    .newStyle1
+    {
+        position: absolute;
+    }
+    .newStyle2
+    {
+        position: absolute;
+        right: 300px;
+    }
+    .newStyle3
+    {
+        position: absolute;
+        left: 500px;
+    }
+
+</style>
+
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+
+<body>
+
+
+
+    <div align="center" runat="server" >
+                             <form id="form1" runat="server">
+     
+   <asp:Image ID="Image1" runat="server" ImageUrl="~/header.png" />
+     <br />
+     
+                              <div style="z-index: 1; left: 115px; top: 4px; position: absolute; height: 36px; width: 632px" >
+                               
+                                   <asp:Table ID="Table1" runat="server" Width="490px" 
+                                       style="z-index: 1; left: 21px; top: 3px; position: absolute; height: 25px; width: 490px; margin-bottom: 6px">
+                                          <asp:TableRow runat="server">
+                <asp:TableCell ID="TableCell7" runat="server" Width="100px">      
+                                            <asp:HyperLink ID="HyperLink7" runat="server" 
+                                            NavigateUrl="~/AllQuestions.aspx">Home</asp:HyperLink>
+                                               </asp:TableCell>
+                                            <asp:TableCell runat="server" Width="100px">
+                                                <asp:LoginName ID="LoginName1" runat="server" ForeColor="Blue" />      
+                                          </asp:TableCell>
+
+                                           <asp:TableCell ID="TableCell1" runat="server" Width="100px">          
+                                                   <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                            </asp:TableCell>
+
+                                               <asp:TableCell ID="TableCell2" runat="server" Width="100px">      
+                                            <asp:HyperLink ID="HyperLink1" runat="server">Control Panel</asp:HyperLink>
+                                               </asp:TableCell>
+                                       </asp:TableRow>
+                               </asp:Table> 
+                                     </div>
+
+                                       <asp:ScriptManager ID="ScriptManager1" runat="server">
+                                       </asp:ScriptManager>
+
+                                     <br />
+                            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                               </asp:ContentPlaceHolder>
+                          
+                        </form>
+                       </div>
+                     
+               
+                     
+               
+                     
+               
+                     
+               </body>
+</html>
+        
+  
+    

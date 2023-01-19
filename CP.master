@@ -1,0 +1,144 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CP.master.cs" Inherits="CP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            height: 345px;
+        }
+    </style>
+</head>
+<body style="height: 262px">
+    <form id="form1" runat="server">
+    <div align="center">
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/header.png"  />         
+                                   <asp:Table ID="Table1" runat="server" Height="16px" 
+                            style="z-index: 1; left: 138px; top: 7px; position: absolute; height: 25px; width: 418px">
+                                          <asp:TableRow ID="TableRow1" runat="server">
+       
+                                         <asp:TableCell ID="TableCell7" runat="server" Width="100px">      
+                                            <asp:HyperLink ID="HyperLink7" runat="server" 
+                                            NavigateUrl="~/AllQuestions.aspx">Home</asp:HyperLink>
+                                               </asp:TableCell>
+
+                                            <asp:TableCell ID="TableCell1" runat="server" Width="100px">
+                                                <asp:LoginName ID="LoginName1" runat="server" ForeColor="Blue" />      
+                                          </asp:TableCell>
+
+                                           <asp:TableCell ID="TableCell2" runat="server" Width="100px">          
+                                                   <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                            </asp:TableCell>
+
+                                               <asp:TableCell ID="TableCell3" runat="server" Width="100px">      
+                                            <asp:HyperLink ID="HyperLink1" runat="server" 
+                                          >Control Panel</asp:HyperLink>
+                                               </asp:TableCell>
+                                       </asp:TableRow>
+                               </asp:Table> 
+      
+                           
+                              
+     <br />
+     
+                              <div style="z-index: 1; left: 248px; top: -1px; position: absolute; height: 41px; width: 408px" >
+                               
+                                     </div>
+    
+            <asp:Table ID="Table2" runat="server" BorderStyle="Dashed" CellPadding="20" CellSpacing="20" 
+           
+           
+            
+            
+            
+                            style="z-index: 1; left: 962px; top: 328px; position: absolute; height: 907px; width: 339px">
+           <asp:TableRow ID="TableRow2" runat="server" Height="50px" Width="100px" 
+                    BorderColor="#FF99FF">
+               <asp:TableCell ID="TableCell4" runat="server"></asp:TableCell>
+               <asp:TableCell ID="TableCell5" runat="server" HorizontalAlign="Right">שם</asp:TableCell>
+           </asp:TableRow>
+           <asp:TableRow ID="TableRow4" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell8" runat="server"></asp:TableCell>
+               <asp:TableCell ID="TableCell9" runat="server" HorizontalAlign="Right">שאלות שענה</asp:TableCell>
+           </asp:TableRow>
+           <asp:TableRow ID="TableRow5" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell10" runat="server"></asp:TableCell>
+               <asp:TableCell ID="TableCell11" runat="server" HorizontalAlign="Right">מוניטין</asp:TableCell>
+           </asp:TableRow>
+           <asp:TableRow ID="TableRow7" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell14" runat="server"><asp:Image ID="Image1" Width="100" Height="100" runat="server" /> 
+               </asp:TableCell>
+               <asp:TableCell ID="TableCell15" runat="server" HorizontalAlign="Right">סמל</asp:TableCell>
+           </asp:TableRow>
+
+              <asp:TableRow ID="TableRow6" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell6" runat="server"><asp:FileUpload ID="FileUpload1" runat="server" /> <br /><asp:Button ID="Button1" runat="server" Text="הוסף תמונה" onClick="Button1_Click"/>
+               </asp:TableCell>
+               <asp:TableCell ID="TableCell13" runat="server" HorizontalAlign="Right"></asp:TableCell>
+           </asp:TableRow>
+
+              <asp:TableRow ID="TableRow3" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell12" runat="server" HorizontalAlign="Right"></asp:TableCell>
+           </asp:TableRow>
+
+             <asp:TableRow ID="TableRow8" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell17" runat="server" HorizontalAlign="Right">
+                   <asp:Button ID="stats" runat="server" Text="לחץ כאן"  OnClick="Stats_Clicked"/></asp:TableCell>
+               <asp:TableCell ID="TableCell16" runat="server" HorizontalAlign="Right">סטטיסטיקה</asp:TableCell>
+           </asp:TableRow>
+
+                 <asp:TableRow ID="TableRow10" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell20" runat="server" HorizontalAlign="Right">
+                <asp:Button ID="Inbox" runat="server" Text="לחץ כאן" /></asp:TableCell>
+                 
+               <asp:TableCell ID="TableCell21" runat="server" HorizontalAlign="Right"> תיבת דואר</asp:TableCell>
+           </asp:TableRow>
+
+          <asp:TableRow ID="TableRow9" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell18" runat="server" HorizontalAlign="Right">
+                    <asp:Button ID="Spam" runat="server" Text="לחץ כאן" /></asp:TableCell>
+               <asp:TableCell ID="TableCell19" runat="server" HorizontalAlign="Right">בקרת ספאם</asp:TableCell>
+           </asp:TableRow>
+
+          <asp:TableRow ID="TableRow11" runat="server" Height="50px" Width="100px">
+               <asp:TableCell ID="TableCell22" runat="server" HorizontalAlign="Right">
+                    <asp:Button ID="ComposeNewMessage" runat="server" Text="לחץ כאן" /></asp:TableCell>
+               <asp:TableCell ID="TableCell23" runat="server" HorizontalAlign="Right">שלח הודעה</asp:TableCell>
+           </asp:TableRow>
+
+       </asp:Table>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        </div>
+
+
+   <br />
+   <br />
+   <br />
+   <div align="center">
+           <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+           
+        </div>
+
+    
+
+        <br />     <br />    <br />    <br />    <br />
+    
+
+    
+
+ 
+    
+
+    
+
+    </form>
+        </body>
+</html>
